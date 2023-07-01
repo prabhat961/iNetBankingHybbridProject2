@@ -1,6 +1,5 @@
 package com.inetbanking_V2.testCases;
 
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.inetbanking_V2.pageObjects.loginPage;
@@ -25,5 +24,51 @@ public class loginPageTest extends baseClass {
 			System.out.println("Test Failed");
 		}
 	}
-
+	
+	@Test
+	public void mainLogoTest() {
+		loginPage lp = new loginPage(driver);
+		if(lp.mainPageLogo()) {
+		System.out.println("Test case passed");	
+		}
+		System.out.println("Test case Failed");
+	}
+	
+	@Test
+	public void testIconLogoTest() {
+		loginPage lp = new loginPage(driver);
+		if(lp.testIconLogo()) {
+		System.out.println(" testIconLogo Test case passed");	
+		}
+		System.out.println("testIconLogo Test case Failed");
+	}
+	
+	@Test
+	public void selIconLogoTest() {
+		loginPage lp = new loginPage(driver);
+		if(lp.selIconLogo()) {
+		System.out.println("selIconLogo Test case passed");	
+		}
+		System.out.println(" selIconLogo Test case Failed");
+	}
+	
+	@Test
+	public void javaIconLogoTest() {
+		loginPage lp = new loginPage(driver);
+		if(lp.javaIconLogo()) {
+		System.out.println("javaIconLogo Test case passed");	
+		}
+		System.out.println("javaIconLogo Test case Failed");
+	}
+	
+	@Test
+	public void liveProjectLogoTest() {
+		loginPage lp = new loginPage(driver);
+		if(lp.liveProjectLogo()) {
+		System.out.println("liveProjectLogo Test case passed");	
+		}
+		System.out.println("liveProjectLogo Test case Failed");
+	}
+	
+	
 }

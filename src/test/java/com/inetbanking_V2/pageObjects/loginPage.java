@@ -29,6 +29,30 @@ public class loginPage {
  @CacheLookup
  WebElement logoutBtn;
  
+ @FindBy(linkText = "Demo Site")
+ @CacheLookup
+ WebElement SiteLogo;
+ 
+ @FindBy(xpath = "//tbody/tr/td[1]/a[1]/img[1]")
+ @CacheLookup
+ WebElement TestingLogo;
+ 
+ @FindBy(xpath = "//tbody//tr//td//a[contains(text(),'Selenium')]")
+ @CacheLookup
+ WebElement SeleniumLogo;
+ 
+ @FindBy(xpath = " //a[normalize-space()='Live Project']")
+ @CacheLookup
+ WebElement LiveProjectLogo;
+ 
+ @FindBy(xpath = "//tbody/tr/td[4]/a[1]/img[1]")
+ @CacheLookup
+ WebElement JavaLogo;
+ 
+
+ 
+ 
+ 
  public void putUsername(String uname) {
 	 userName.sendKeys(uname); 
  }
@@ -45,7 +69,29 @@ public class loginPage {
 	 logoutBtn.click();
  }
  
+ public boolean mainPageLogo() {
+	 SiteLogo.isDisplayed();
+	 return true;
+ }
  
+ public boolean testIconLogo() {
+	 TestingLogo.isDisplayed();
+	 return true;
+ }
  
+ public boolean selIconLogo() {
+	 SeleniumLogo.isDisplayed();
+	 return true;
+ }
+ 
+ public boolean javaIconLogo() {
+	 JavaLogo.isDisplayed();
+	 return true;
+ }
+ 
+ public boolean liveProjectLogo() {
+	 LiveProjectLogo.isDisplayed();
+	 return true;
+ }
  
 }
